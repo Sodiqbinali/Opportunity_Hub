@@ -54,7 +54,14 @@ pwShowHide.forEach((icon) => {
     });
   });
   
-
+  signup.addEventListener("click", (e) => {
+    e.preventDefault();
+    formContainer.classList.add("active");
+  });
+  login.addEventListener("click", (e) => {
+    e.preventDefault();
+    formContainer.classList.remove("active");
+  });
 
 // clear signin&signup error
 pass.addEventListener('keyup', ()=>{
