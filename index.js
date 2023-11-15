@@ -29,3 +29,25 @@ signinForm = document.querySelector('.signinForm'),
 signupForm = document.querySelector('.signupForm'),
 signupError = document.querySelector('.signupError'),
 signinError = document.querySelector('.signinError');
+
+
+
+//main
+const formContainer = document.querySelector(".form_container");
+
+// clear signin&signup error
+pass.addEventListener('keyup', ()=>{
+  signupError.style.display='none';
+})
+
+conPass.addEventListener('keyup', ()=>{
+  signupError.style.display='none';
+})
+
+signinUser.addEventListener('keyup', ()=>{
+  signinError.style.display='none';
+})
+
+signinPass.addEventListener('keyup', ()=>{
+  signinError.style.display='none';
+})
