@@ -18,3 +18,14 @@
  const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+//form data
+const fullname = document.querySelector(".signupFullname"),
+username = document.querySelector('.signupUsername'),
+pass = document.querySelector('.signupPass'),
+signinUser = document.querySelector('.signinUser'),
+signinPass = document.querySelector('.signinPass'),
+conPass = document.querySelector('.signupConPass'),
+signinForm = document.querySelector('.signinForm'),
+signupForm = document.querySelector('.signupForm'),
+signupError = document.querySelector('.signupError'),
+signinError = document.querySelector('.signinError');
