@@ -79,3 +79,22 @@ signinUser.addEventListener('keyup', ()=>{
 signinPass.addEventListener('keyup', ()=>{
   signinError.style.display='none';
 })
+
+//sign up function
+
+const sign_up = async (fullname,username,password) => {
+    try {
+      const docRef = await addDoc(collection(db, "users"), {
+        fullname,
+        username,
+        password,  
+      })
+      .then(()=>{
+      alert('Signup done wait few minutes then sign in');
+      formContainer.classList.remove("active");
+      })
+    } catch (e) {
+      console.error("Error signing up: ", e);
+    }
+  }
+  
