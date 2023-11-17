@@ -97,4 +97,25 @@ const sign_up = async (fullname,username,password) => {
       console.error("Error signing up: ", e);
     }
   }
+
+  //sign in function
+  const sign_in = async (username, password) =>{
+    try {
+      const check = query(collection(db, "users"), where('username','==',username), where('password', '==', password));
+     const querySnapshot = await getDocs(check);
+    
+      if(!querySnapshot.empty){
+        querySnapshot.forEach((doc) => {
+          localStorage.setItem("fullname", doc.data().fullname);
+          localStorage.setItem("userId", doc.id);
+        });
+        window.location.href = "./main.html";
+      } else{
+          signinError.style.display = 'block';
+      }
+    } catch (error) {
+      console.log("Error can't signin", error);
+    }
+  }
+  
   
