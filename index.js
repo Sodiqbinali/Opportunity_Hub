@@ -117,5 +117,22 @@ const sign_up = async (fullname,username,password) => {
       console.log("Error can't signin", error);
     }
   }
+
+  //function call
+  
+  signinForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    sign_in(signinUser.value, signinPass.value);
+  })
+  
+  signupForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    if (pass.value === conPass.value){
+      sign_up(fullname.value,username.value,pass.value);
+      signupForm.reset();
+    } else {
+      signupError.style.display = 'block';
+    }
+  })
   
   
