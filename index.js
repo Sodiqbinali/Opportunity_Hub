@@ -5,14 +5,14 @@
 
  
  const firebaseConfig = {
-   apiKey: "AIzaSyCy3touPHwSykuxsyX6o9dOEMzCH_ur1_c",
-   authDomain: "opportunity-hub-878c4.firebaseapp.com",
-   projectId: "opportunity-hub-878c4",
-   storageBucket: "opportunity-hub-878c4.appspot.com",
-   messagingSenderId: "112158870984",
-   appId: "1:112158870984:web:69a433a3225161ee1fc4fd",
-   measurementId: "G-PK7QGYGW0G"
- };
+    apiKey: "AIzaSyA91MjIYNNAiImaEMawINNxhqxg1feo2FQ",
+    authDomain: "opportunityhub-2c5a4.firebaseapp.com",
+    projectId: "opportunityhub-2c5a4",
+    storageBucket: "opportunityhub-2c5a4.appspot.com",
+    messagingSenderId: "981392837619",
+    appId: "1:981392837619:web:0a3db889886bf14e70e086",
+    measurementId: "G-XDFGY5R3CC"
+  };
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
