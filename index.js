@@ -92,9 +92,10 @@ const sign_up = async (fullname,username,password) => {
       .then(()=>{
       alert('Signup done wait few minutes then sign in');
       formContainer.classList.remove("active");
+      signupForm.reset();
       })
     } catch (e) {
-      console.error("Error signing up: ", e);
+      alert("Error signing up: ", e);
     }
   }
 
@@ -129,7 +130,6 @@ const sign_up = async (fullname,username,password) => {
     e.preventDefault();
     if (pass.value === conPass.value){
       sign_up(fullname.value,username.value,pass.value);
-      signupForm.reset();
     } else {
       signupError.style.display = 'block';
     }
