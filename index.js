@@ -110,7 +110,7 @@ const sign_up = async (fullname,username,password) => {
           localStorage.setItem("fullname", doc.data().fullname);
           localStorage.setItem("userId", doc.id);
         });
-        window.location.href = "./main.html";
+        window.location.href = "./dash.html";
       } else{
           signinError.style.display = 'block';
       }
