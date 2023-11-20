@@ -1,0 +1,9 @@
+const theme = document.querySelector('.theme');
+const themeModal = document.querySelector('.customize-theme');
+const fontSizes = document.querySelectorAll('.choose-size span');
+const colorPalette = document.querySelectorAll('.choose-color span');
+var root = document.querySelector(':root');
+const priColor = document.querySelectorAll('.choose-bg div');
+const createBtn = document.querySelector('.create .btn');
+const creatPost = document.querySelector('.newPost');
+const signout = document.querySelector('.signoutBtn');
