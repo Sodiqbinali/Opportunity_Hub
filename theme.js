@@ -60,3 +60,29 @@ fontSizes.forEach(size => {
         document.querySelector('html').style.fontSize = fontSize;
     })   
 })
+// change primary color
+const removePalatteSelector = () => {
+    colorPalette.forEach(color => {
+        color.classList.remove('active');
+    })
+}
+
+colorPalette.forEach(color => {
+    color.addEventListener('click', () => {
+        let primary;
+        removePalatteSelector();
+        color.classList.toggle('active');
+        if (color.classList.contains('color-1')){
+                primary = 252;
+        } else if (color.classList.contains('color-2')){
+                primary = 52;
+        } else if (color.classList.contains('color-3')){
+                primary = 352;
+        } else if (color.classList.contains('color-4')){
+                primary = 152;
+        } else if (color.classList.contains('color-5')){
+                primary = 202;
+        }
+        root.style.setProperty('--primary-color-hue', primary);
+    })
+})
