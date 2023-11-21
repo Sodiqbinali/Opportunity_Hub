@@ -29,3 +29,34 @@ themeModal.addEventListener('click', e =>{
 theme.addEventListener('click', () => {
     themeModal.style.display = 'grid';
 });
+
+// changing size
+
+const removeSizeSelector = () => {
+    fontSizes.forEach(size => {
+        size.classList.remove('active');
+    })
+}
+
+fontSizes.forEach(size => {
+    let fontSize;
+    
+    size.addEventListener('click', () => {
+        removeSizeSelector();
+        size.classList.toggle('active');
+
+        if(size.classList.contains('font-size-1')){
+            fontSize = '10px';
+        } else if(size.classList.contains('font-size-2')){
+            fontSize = '13px';
+        } else if(size.classList.contains('font-size-3')){
+            fontSize = '16px';
+        } else if(size.classList.contains('font-size-4')){
+            fontSize = '19px';
+        } else if(size.classList.contains('font-size-5')){
+            fontSize = '22px';
+        }
+        // change the font size
+        document.querySelector('html').style.fontSize = fontSize;
+    })   
+})
