@@ -86,3 +86,35 @@ colorPalette.forEach(color => {
         root.style.setProperty('--primary-color-hue', primary);
     })
 })
+//background color
+const removePriColorActive = () => {
+    priColor.forEach(color => color.classList.remove('active'));
+}
+
+priColor.forEach(color => {
+    color.addEventListener('click', () => {
+        removePriColorActive();
+        color.classList.toggle('active');
+        let light;
+        let white;
+        let dark;
+
+        if (color.classList.contains('bg-2')){
+            dark = '95%';
+            white = '20%';
+            light = '15%';
+        } else if (color.classList.contains('bg-3')){
+            dark = '95%';
+            white = '10%';
+            light = '0%';
+        }
+
+        root.style.setProperty('--dark-color-lightness', dark)
+        root.style.setProperty('--light-color-lightness', light)
+        root.style.setProperty('--white-color-lightness', white)
+
+        if (color.classList.contains('bg-1')) {
+            window.location.reload();
+        }
+    })
+})
