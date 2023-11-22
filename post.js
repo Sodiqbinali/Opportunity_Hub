@@ -22,3 +22,20 @@ const link = document.querySelector("#link");
 const linkDesc = document.querySelector("#linkDesc");
 const postBtn = document.querySelector(".newPost");
 const feeds = document.querySelector('.feeds');
+
+const addPost = async (userId,fullname) => {
+    try {
+        const docRef = await addDoc(collection(db, "posts"), {
+          link: link.value,
+          desc: linkDesc.value,
+          userId,
+          fullname,
+          approved: false,
+          timestamp: serverTimestamp()
+        });
+      
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+}
