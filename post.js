@@ -17,3 +17,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+const creatPost = document.querySelector('.newPost');
+const link = document.querySelector("#link");
+const linkDesc = document.querySelector("#linkDesc");
+const postBtn = document.querySelector(".newPost");
+const feeds = document.querySelector('.feeds');
